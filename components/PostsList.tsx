@@ -11,6 +11,7 @@ export default async function PostsList() {
     next: { revalidate: 3600 },
   });
   const data = await res.json();
+  console.log(data);
   return (
     <ul className="flex flex-col gap-6  leading-8 text-xl font-medium">
       {data.posts.map((e: { id: number; title: string }) => (
