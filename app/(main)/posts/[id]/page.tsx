@@ -12,7 +12,7 @@ export default async function page({ params }: { params: { id: number } }) {
 
 	// Getting specific data from prisma
 	const resPrisma = await prisma.post.findUnique({
-		where: { id: Number(params.id) },
+		where: { id: params.id },
 	});
 
 	return (
